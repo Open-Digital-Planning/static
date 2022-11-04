@@ -13,13 +13,16 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="preload">
     <a href="#main" class="u-visually-hidden">Skip to content</a>
     {% include "header.njk" %}
     <main id="main" tabindex="-1">
       {{ content | safe }}
     </main>
     {% include "register-block.njk" %} {% include "footer.njk" %}
+    <script>
+      document.querySelector('body').classList.remove('preload')
+    </script>
     <script src="/js/menu-toggle.js"></script>
   </body>
 </html>
