@@ -67,10 +67,6 @@
   @include media-query(md) {
     padding: 0;
   }
-  &:focus {
-    outline: none;
-    color: var(--colour-pink);
-  }
 }
 .c-menu__open-button,
 .c-menu__close-button {
@@ -86,10 +82,6 @@
     background: none;
     font-family: var(--font-brand);
     border: none;
-    &:focus {
-      outline: none;
-      color: var(--colour-pink);
-    }
   }
   @include media-query(md) {
     display: none;

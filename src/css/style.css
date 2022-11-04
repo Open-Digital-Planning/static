@@ -136,7 +136,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
-:focus {
+:focus-visible {
   outline: var(--colour-primary) solid 1px;
   outline-offset: 0.25rem;
 }
@@ -164,6 +164,13 @@ main:focus {
 * {
   transition: all 0.1s ease-in-out;
   transition-property: color, background;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
 body {
@@ -726,10 +733,6 @@ p {
     padding: 0;
   }
 }
-.c-menu__link:focus {
-  outline: none;
-  color: var(--colour-pink);
-}
 
 .c-menu__open-button,
 .c-menu__close-button {
@@ -747,11 +750,6 @@ p {
   background: none;
   font-family: var(--font-brand);
   border: none;
-}
-.c-menu__open-button button:focus,
-.c-menu__close-button button:focus {
-  outline: none;
-  color: var(--colour-pink);
 }
 @media (min-width: 48em) {
   .c-menu__open-button,
