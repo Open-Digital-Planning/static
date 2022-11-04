@@ -1,0 +1,15 @@
+@use '../settings/settings.media-query' as *;
+/// MEDIA QUERY MIXIN
+///
+/// @param {string} $mq - a valid media query
+///
+@mixin media-query($key) {
+  $matched-media-query: map-get($media-queries, $key);
+  @if not $matched-media-query{
+    @warn #{ 'Breakpoint, ‘' + $key + '’ not found' };
+  } @else {
+    @media #{ $matched-media-query } {
+      @content;
+    }
+  }
+}

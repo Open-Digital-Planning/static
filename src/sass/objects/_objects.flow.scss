@@ -1,0 +1,13 @@
+.o-flow > * + * {
+  margin-top: var(--flow-space, var(--space-s));
+}
+
+/**
+*.post h2, .post h3 {
+    --flow-space: 5rem;
+}
+
+.eyebrow+:is(h1,h2,h3,h4) {
+    --flow-space: 1rem;
+}
+**/

@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+title: Funding
+head_content: |
+  How to fund joining the programme
+intro_title: DLUHC
+intro_content: |
+  <p>Joining Open Digital Planning means committing staff to the project and purchasing our Services.</p>
+  <p>DLUHC is making funding available according to your level of commitment.</p>
+content:
+  - type: text
+    heading: January 2023
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+---
+
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
+intro %}
+{{ intro_content | safe }}
+{% endblock %} {% block body %} {% for item in content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}

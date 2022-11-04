@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: Benefits
+head_content: |
+  Building the case for your local authority to join Open Digital Planning.
+head_image_url: /images/tablet-bops.png
+head_image_alt: A tablet displaying an application form.
+intro_title: Metrics
+intro_content: |
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+  enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit 
+  esse cillum dolore eu fugiat nulla pariatur</p>
+content:
+  - type: text
+    heading: Reduced costs / admin
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  - type: cta_and_quote
+    cta_heading:  We have calculated the benefits case data
+    cta_link_text: Download spreadsheet
+    cta_link_url: /
+    quote: It's great
+    attributee: Bob, Planning Manager at Lambeth Council
+  - type: text
+    heading: Better user experience / Improved service delivery
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  - type: text
+    heading: Higher team satisfaction
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+---
+
+{% import "blocks.njk" as blocks %} 
+{% extends "layouts/standard-page.njk" %} 
+{% block head %} {% include "page-head-with-image.njk" %} {% endblock %} 
+{% block intro %}
+{{ intro_content | safe }}
+{% endblock %} 
+{% block body %} 
+  {% for item in content %}
+    {{ blocks.print(item) }}
+  {% endfor %} 
+{% endblock %}

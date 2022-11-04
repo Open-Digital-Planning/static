@@ -1,0 +1,10 @@
+@use "sass:map";
+@use '../settings/settings.type' as type;
+$start: map.get(type.$steps, "from");
+$end: map.get(type.$steps, "to");
+
+@for $i from $start through $end {
+  .u-step-#{$i} {
+    font-size: var(--step-#{$i});
+  }
+}

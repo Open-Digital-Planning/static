@@ -1,0 +1,23 @@
+.c-site-head {
+  padding: var(--space-s) 0;
+}
+
+.c-site-head__brand svg {
+  height: 55px;
+  width: 132px;
+}
+
+.c-site-head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.c-site-head-container__top {
+  flex: 1;
+}
+
+.c-site-head-container__bottom {
+  flex: 9999;
+}

@@ -1,0 +1,9 @@
+.c-register-block {
+  --switcher-threshold: 50rem;
+  --switcher-gutter: var(--space-l);
+}
+
+.c-register-block__ctas {
+  --switcher-threshold: 30rem;
+  --switcher-gutter: 1rem;
+}

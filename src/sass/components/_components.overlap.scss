@@ -1,0 +1,60 @@
+@use '../tools/tools.media-query' as *;
+.c-overlap {
+  color: var(--colour-white);
+}
+
+.c-overlap__top {
+  background-color: var(--colour-navy);
+}
+.c-overlap__bottom {
+  background-color: var(--colour-pink);
+}
+
+@include media-query(md) {
+  .c-overlap__top {
+    overflow: hidden;
+    .c-overlap-container {
+      position: relative;
+      &:after {
+        content: '';
+        height: 100%;
+        right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+        top: 0;
+        width: 999px;
+        transform: translateX(999px);
+        position: absolute;
+        display: block;
+        background-color: white;
+      }
+    }}
+    
+    .c-overlap__bottom {
+      overflow: hidden;
+      .c-overlap-container {
+        position: relative;
+        transform: translateX(5rem);
+        &:before {
+          content: '';
+          height: 80%;
+          left: 0;
+          top: 0;
+          width: 999px;
+          transform: translateX(-999px);
+          position: absolute;
+          display: block;
+          background-color: var(--colour-navy);
+        }
+      &:after {
+        content: '';
+        height: 80%;
+        left: 0;
+        bottom: 0;
+        width: 999px;
+        transform: translateX(-999px);
+        position: absolute;
+        display: block;
+        background-color: white;
+      }
+      }
+    }
+}

@@ -1,0 +1,11 @@
+@use '../settings/settings.space' as space;
+
+.flow-space-0 {
+  --flow-space: 0
+}
+
+@each $step in space.$steps {
+  .u-flow-space-#{$step} {
+    --flow-space: var(--space-#{$step});
+  }
+}

@@ -1,0 +1,18 @@
+{% macro print(item) %} 
+  {% if item.type == 'text' %} 
+    {% set heading = item.heading %} 
+    {% set content = item.content %} 
+    {% include "text-block.njk" %}
+  {% elif item.type == 'quote' %} 
+    {% set quote = item.quote %} 
+    {% set attributee = item.attributee %} 
+    {% include "quote-block.njk" %}
+  {% elif item.type == 'cta_and_quote' %} 
+    {% set cta_heading = item.cta_heading %} 
+    {% set cta_link_text = item.cta_link_text %} 
+    {% set cta_link_url = item.cta_link_url %} 
+    {% set quote = item.cta_heading %} 
+    {% set attributee = item.attributee %} 
+    {% include "cta-and-quote-block.njk" %}
+  {% endif %} 
+{% endmacro %}

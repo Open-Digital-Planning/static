@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Guidance service
+title_icon: triangle
+head_content: |
+  More power to planners, less work.
+intro_title: Aim
+intro_content: |
+  <p>Built on the Plan✕ platform, our Guidance service translates national permitted development rules into simple questions relevant to a project. It can be used use by individuals and planning professionals.</p>
+content:
+  - type: text
+    heading: Features
+    content: |
+      <p>Applicants will triage their planning project in minutes to find out whether they need planning permission, using guides written and published by local planning authorities themselves, putting planners in control.</p>
+      <p>Using the Plan✕ editor, officers can write, check, analyse and improve their digital guides as flowcharts, to get the planning outcomes they want.</p>
+  - type: text
+    heading: Technical details
+    content: |
+      <p>If a project requires planning permission, applicants can access any data they have submitted as part of the Application Service.</p>
+      <p>This service will live on your website: When you join Open Digital Planning, you host our software on your own site.</p>
+---
+
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
+intro %}
+{{ intro_content | safe }}
+{% endblock %} {% block body %} {% for item in content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}

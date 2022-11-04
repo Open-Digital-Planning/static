@@ -1,0 +1,19 @@
+@use '../tools/tools.media-query' as *;
+
+.c-home-hero {
+  background-image: url(/images/tablet.png);
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 0;
+  background-size: min(80%, 30rem); 
+  padding-bottom: min(80%, 30rem);
+  padding-top: var(--space-l);
+  @include media-query(lg) {
+    padding-bottom: var(--space-l);
+    background-size: contain;
+  }
+}
+.c-home-hero__heading {
+  max-width: 15ch;
+}
+
+

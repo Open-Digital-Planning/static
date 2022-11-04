@@ -1,0 +1,13 @@
+.c-background {
+  background-position: right 2rem center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.c-background--calendar {
+  background-image: url(/images/calendar.svg);
+}
+
+.c-background--quote-mark {
+  background-image: url(/images/quote-mark.svg);
+}

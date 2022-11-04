@@ -1,0 +1,13 @@
+name: odp
+proxy:
+  node:
+    - odp.sync.lndo.site:8181
+services:
+  node:
+    type: node
+    overrides:
+      ports:
+        - '8181:8181'
+tooling:
+  npm:
+    service: node

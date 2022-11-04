@@ -1,0 +1,17 @@
+.c-page-intro {
+  --switcher-threshold: 50rem;
+}
+.c-page-intro__heading {
+  padding-bottom: 0.5em;
+  position: relative;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-color: var(--colour-pink);
+    border-radius: 2px;
+  }
+}

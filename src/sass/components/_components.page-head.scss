@@ -1,0 +1,30 @@
+.c-page-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & > * {
+    min-width: min(100vw, 400px);
+    flex: 1;
+  }
+}
+
+.c-page-head__image {
+  display: flex;
+  justify-content: end;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.c-page-head__content {
+  align-self: center;
+}
+
+.c-page-head-image-wrapper {
+  max-width: 800px;
+  max-height: 500px;
+  width: 100%;
+}

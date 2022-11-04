@@ -1,0 +1,26 @@
+.c-icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 0.9em;
+  line-height: 1;
+  position: relative;
+  top: -1px;
+  vertical-align: middle;
+  width: 0.9em;
+}
+
+.c-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.c-icon--big {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.c-icon--small {
+  height: 0.6em;
+  width: 0.6em;
+}

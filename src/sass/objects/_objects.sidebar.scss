@@ -1,0 +1,16 @@
+.o-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sidebar-gutter, clamp(1.09rem, 1rem + 0.47vw, 1.33rem));
+}
+.o-sidebar > * {
+  flex-grow: 1;
+  flex-basis: var(--sidebar-width, 16rem);
+}
+.o-sidebar > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(
+    70% - var(--sidebar-gutter, clamp(1.09rem, 1rem + 0.47vw, 1.33rem))
+  );
+}

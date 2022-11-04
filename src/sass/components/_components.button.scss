@@ -1,0 +1,32 @@
+@use "sass:color";
+@use "sass:map";
+@use "../settings/settings.colours" as *;
+
+.c-button {
+  font-family: var(--font-brand);
+  font-weight: 500;
+  text-decoration: none;
+  background-color: var(--colour-pink);
+  font-size: var(--step--1);
+  color: var(--colour-white);
+  display: inline-block;
+  padding: 0.5em 0.7em;
+  --link: var(--colour-white);
+  --link-visited: var(--colour-white);
+  --link-active: var(--colour-white);
+  --link-hover: var(--colour-white);
+  &:hover {
+    background-color: color.scale(map.get($colours, "pink"), $lightness: -30%);
+  }
+}
+
+.c-button--action {
+  background-color: var(--colour-yellow);
+  font-weight: 600;
+  --link: var(--colour-black);
+  --link-visited: var(--colour-black);
+  --link-hover: var(--colour-black);
+  &:hover {
+    background-color: color.scale(map.get($colours, "yellow"), $lightness: -30%);
+  }
+}

@@ -1,0 +1,79 @@
+---
+title: Home
+layout: layouts/base.njk
+intro: We are a team of local government planners and officers rethinking local planning and co-designing new software. Together we are Open Digital Planning.
+by_councils_heading: Join a collaborative venture
+by_councils_content: We are creating user-centred services that make applying for and assessing planning applications simpler for applicants, agents and council officers.
+for_councils_heading: The services and software
+for_councils_content: Open Digital Planning is a set of integrated software tools for planning teams in UK councils.
+services:
+  - name: Guidance
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: triangle
+    url: /services/guidance
+  - name: Application
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: diamond
+    url: /services/application
+  - name: Assessment
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: circle
+    url: /services/assessment
+---
+
+<div class="c-home-hero">
+  <div class="o-flow o-container u-flow-space-m">
+    <h1 class="c-home-hero__heading u-step-5">
+      Planning services <span class="u-text-pink">designed by planners</span>
+    </h1>
+    <p>{{ intro }}</p>
+  </div>
+</div>
+<div class="c-card u-bg-grey-light">
+  <div class="c-card o-container o-region o-flow">
+    <h2 class="c-card__eyebrow">By councils</h2>
+    <h3>{{ by_councils_heading }}</h3>
+    <p>{{ by_councils_content }}</p>
+    <a href="/" class="c-button">Learn more</a>
+  </div>
+</div>
+<div class="o-region o-container o-flow">
+  <div class="c-card o-flow">
+    <h2 class="c-card__eyebrow">For councils</h2>
+    <h3>{{ for_councils_heading }}</h3>
+    <p>{{ for_councils_content }}</p>
+  </div>
+  {% include "service-tiles.njk" %}
+</div>
+<div class="c-overlap">
+  <div class="c-overlap__top">
+    <div class="c-overlap-container o-container o-region o-flow">
+      <h2>
+        We estimate that our software will reduce invalid applications by 71%
+      </h2>
+      <a href="/" class="c-button c-button--action">Find out how</a>
+    </div>
+  </div>
+  <div class="c-overlap__bottom">
+    <div
+      class="c-overlap-container c-background c-background--calendar o-container o-region o-flow"
+    >
+      <h2 class="u-step-1">Upcoming event</h2>
+      <h3>Show & Tell: RIPA/BOPS</h3>
+      <p>12 October 2022</p>
+      <a href="/" class="c-button c-button--action">Find out how</a>
+    </div>
+  </div>
+</div>
+<div class="o-container o-region o-flow">
+  <h2>From out Twitter</h2>
+  <p>
+    <a href="/" class="c-with-icon">
+      Follow us
+      <svg class="c-icon c-icon--small">
+        <use xlink:href="images/all.svg#right-arrow" />
+      </svg>
+    </a>
+  </p>
+  <div class="o-auto-grid">{% include "tweets.njk" %}</div>
+</div>

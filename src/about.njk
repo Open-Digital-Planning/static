@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+title: About the programme
+head_content: |
+  You don't just buy the services, you help create them. You contribute
+  ideas for service improvements, then help to design and test them. You
+  are part of a large consortium, joining workshops with councils all over
+  the country.
+head_image_url: /images/workshop.png
+head_image_alt: A workshop!
+intro_title: Who's involved?
+partners:
+  - name: Department for Leveling Up, Housing & Communities
+    logo: leveling-up.png
+  - name: Southwark Council
+    logo: southwark.png
+  - name: Lambeth Council
+    logo: lambeth.png
+  - name: Newcastle City Council
+    logo: newcastle.png
+  - name: Camden
+    logo: camden.png
+  - name: Buckinghamshire Council
+    logo: buckinghamshire.png
+  - name: Dacorum Borough Council
+    logo: dacorum.png
+  - name: Gloucester City Council
+    logo: gloucester.png
+  - name: Medway Council
+    logo: medway.png
+  - name: Open Systems Labs
+    logo: open-systems-labs.png
+  - name: Unboxed
+    logo: unboxed.png
+  - name: Agile Collective
+    logo: agile-collective.png
+  - name: Nomensa
+    logo: nomensa.png
+content:
+  - type: text
+    heading: How it works
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  - type: quote
+    quote: It's great!
+    attributee: Bob, Planning Manager at Lambeth Council
+  - type: text
+    heading: Future of planning / Digital transformation
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+---
+
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block intro %}
+<ul class="c-partner-logos" role="list">
+  {% for partner in partners %}
+  <li class="c-partner-logos__list-item">
+    <img
+      src="/images/partner-logos/{{ partner.logo }}"
+      alt="{{ partner.name }}"
+    />
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %} {% block body %} {% for item in content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}

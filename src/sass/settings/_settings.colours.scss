@@ -1,0 +1,24 @@
+$colours: (
+  "black": #1D1D1D,
+  "pink": #CB3C79,
+  "yellow": #FBD348,
+  "blue": #3267CF,
+  "navy": #15336D,
+  "white": #FFF,
+  "grey-light": #F2F1F0,
+  "grey-dark": #BBBBBB
+);
+
+:root {
+  // Named colours
+  @each $name, $hex in $colours {
+    --colour-#{$name}: #{$hex};
+  }
+
+  // Generics
+	--colour-base: var(--colour-black);
+	--colour-primary: var(--colour-pink);
+	--colour-secondary: var(--colour-blue);
+  --colour-action: var(--colour-yellow);
+  --colour-neutral: var(--colour-grey-light)
+}

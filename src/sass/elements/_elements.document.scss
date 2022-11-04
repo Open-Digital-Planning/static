@@ -1,0 +1,16 @@
+html {}
+
+body {
+	font-family: var(--font-base);
+	font-size: var(--step-0);
+	line-height: calc(2px + 2ex + 2px); // see https://kittygiraudel.com/2020/05/18/using-calc-to-figure-out-optimal-line-height/
+	color: var(--colour-base);
+  display: flex; // sticky footer
+  flex-direction: column; // sticky footer
+  background-color: var(--colour-white);
+  overflow-x: hidden; // needed to prevent horizontal scroll when using .breakout
+}
+
+main {
+  flex: auto; // in comination with flex properties on body we get a 'sticky footer'
+}

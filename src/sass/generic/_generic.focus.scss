@@ -1,0 +1,8 @@
+:focus {
+  outline: var(--colour-primary) solid 1px;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: 0; // Needed for the 'skip to content' link
+}

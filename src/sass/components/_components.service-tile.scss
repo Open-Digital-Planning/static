@@ -1,0 +1,24 @@
+.c-service-tile-list {
+  --switcher-threshold: 50rem;
+  & > * {
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+}
+
+.c-service-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--colour-grey-light);
+  padding: var(--space-m);
+}
+
+.c-service-tile__icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.c-service-tile__link {
+  color: var(--colour-pink)
+}

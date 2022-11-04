@@ -1,0 +1,22 @@
+a:link {
+  color: var(--link);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:active {
+  color: var(--link-active);
+}
+
+a[href^='tel'] {
+	color: inherit;
+	cursor: default;
+	text-decoration: none;
+	appearance: none;
+}

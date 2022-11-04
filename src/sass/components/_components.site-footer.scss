@@ -1,0 +1,13 @@
+.c-site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  --link: var(--colour-white);
+  --link-visited: var(--colour-white);
+  --link-hover: var(--colour-primary);
+}
+
+.c-site-footer__community {
+  
+}

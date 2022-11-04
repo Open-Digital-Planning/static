@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+title: Intergrated software
+head_content: |
+  We believe that digital planning services and software products 
+  should make planners jobs easier, while making it simpler to turn 
+  applicant ideas into a reality.
+head_image_url: /images/laptop.png
+head_image_alt: A laptop displaying an application form.
+intro_title: About the services
+intro_content: |
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+  enim ad minim veniam, quis nostrud exercitation 
+  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit 
+  esse cillum dolore eu fugiat nulla pariatur</p>
+services:
+  - name: Guidance
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: triangle
+    url: /services/guidance
+  - name: Application
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: diamond
+    url: /services/application
+  - name: Assessment
+    content: Support citizens in your council who want to find out if they need to apply for planning permission
+    icon_id: circle
+    url: /services/assessment
+content:
+  - type: quote
+    quote: It's great!
+    attributee: Bob, Planning Manager at Lambeth Council
+  - type: text
+    heading: Development teams
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  - type: text
+    heading: Plan X
+    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+---
+
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
+intro %}
+{{ intro_content | safe }}
+{% endblock %} {% block body %} {% include "service-tiles.njk" %} {% for item in
+content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}

@@ -1,0 +1,31 @@
+{% if head_image_url %}
+  {% include "page-head-with-image.njk" %}
+{% else %}
+  <div class="o-container o-region o-flow">
+    <h1 class="{%if title_icon %}c-with-icon{% endif %}">
+      {% if title_icon %}
+        <svg class="c-icon">
+            <use xlink:href="/images/all.svg#{{ title_icon }}" />
+          </svg>
+      {% endif %}
+      {{ title }}
+    </h1>
+    <p>{{ head_content }}</p>
+  </div>
+{% endif %}
+<div class="u-bg-grey-light">
+  <div class="c-page-intro o-switcher o-container o-region">
+    <div class="c-page-intro__top o-flow">
+      <h2 class="c-page-intro__heading">{{ intro_title }}</h2>
+      {% block intro %}{% endblock %}
+    </div>
+    {% if intro_image_url %}
+    <div class="c-page-intro__bottom">
+      <img src="{{ intro_image_url }}" alt="{{ intro_image_alt }}">
+    </div>
+    {% endif %}
+  </div>
+</div>
+<div class="c-page-content o-container o-flow o-region u-flow-space-xl">
+  {% block body %}{% endblock %}
+</div>

@@ -1,0 +1,7 @@
+@use '../settings/settings.colours' as *;
+
+@each $name, $hex in $colours {
+  .u-bg-#{$name} {
+    background-color: var(--colour-#{$name});
+  }
+}

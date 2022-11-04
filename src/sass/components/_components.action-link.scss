@@ -1,0 +1,15 @@
+.c-action-link {
+  color: var(--colour-pink);
+  display: flex;
+  align-items: center;
+  &:after {
+    padding-left: 1.5em;
+    content: '';
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    background-image: url(/images/right-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
