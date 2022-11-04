@@ -7,23 +7,34 @@
       <span class="u-visually-hidden">{{ site.name }}, Homepage</span>
     </a>
     <nav class="c-site-head__nav c-site-head-container__bottom">
-      <ul class="c-menu" role="list">
-        <li class="c-menu__item">
-          <a class="c-menu__link" href="/about">About</a>
-        </li>
-        <li class="c-menu__item">
-          <a class="c-menu__link" href="/services">Software & services</a>
-        </li>
-        <li class="c-menu__item">
-          <a class="c-menu__link" href="/benefits">Benefits</a>
-        </li>
-        <li class="c-menu__item">
-          <a class="c-menu__link" href="/join">How to join</a>
-        </li>
-        <li class="c-menu__item">
-          <a class="c-menu__link" href="/funding">Funding</a>
-        </li>
-      </ul>
+      <h2 class="u-visually-hidden">Main navigation</h2>
+      <div class="c-menu__open-button">
+        <button class="js-menu-toggle-open">
+          <svg class="c-icon">
+            <use xlink:href="/images/all.svg#burger" />
+          </svg>
+          <span>Menu</span>
+        </button>
+      </div>
+      <div class="c-menu js-menu-wrapper">
+        <div class="c-menu__close-button">
+          <button class="js-menu-toggle-close">
+            <svg class="c-icon">
+              <use xlink:href="/images/all.svg#close" />
+            </svg>
+            <span>Close</span>
+          </button>
+        </div>
+        <ul class="c-menu__list js-menu-list" role="list">
+          {% for item in menu.main %}
+          <li
+            class="c-menu__item js-menu-item {% if item.url in page.url%}c-menu__item--active{% endif %}"
+          >
+            <a class="c-menu__link" href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
     </nav>
   </div>
 </header>

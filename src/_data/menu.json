@@ -1,0 +1,24 @@
+{
+  "main": [
+    {
+      "url": "/about",
+      "title": "About"
+    },
+    {
+      "url": "/services",
+      "title": "Software & services"
+    },
+    {
+      "url": "/benefits",
+      "title": "Benefits"
+    },
+    {
+      "url": "/join",
+      "title": "How to join"
+    },
+    {
+      "url": "/funding",
+      "title": "Funding"
+    }
+  ]
+}
