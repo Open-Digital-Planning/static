@@ -1,5 +1,7 @@
 ;(function () {
-  console.log('menu toggle!')
+  const overlay = document.createElement('div')
+  overlay.classList.add('menu-overlay')
+  document.body.appendChild(overlay)
   const openButton = document.querySelector('.js-menu-toggle-open')
   const closeButton = document.querySelector('.js-menu-toggle-close')
   const firstLink = document.querySelector(
@@ -14,6 +16,9 @@
 
   const menuWrapper = document.querySelector('.js-menu-wrapper')
   const openMenu = function () {
+    document.body.style.overflow = 'hidden'
+    overlay.style.opacity = '1'
+    overlay.style.display = 'block'
     menuWrapper.classList.toggle('open')
     setTimeout(function () {
       firstLink.focus()
@@ -21,6 +26,9 @@
     menuIsOpen = true
   }
   const closeMenu = function () {
+    document.body.style.overflow = ''
+    overlay.style.opacity = '0'
+    overlay.style.display = 'none'
     menuWrapper.classList.toggle('open')
     setTimeout(function () {
       openButton.focus()
