@@ -602,6 +602,9 @@ p {
   display: flex;
   justify-content: end;
 }
+.c-page-head__image picture {
+  height: 100%;
+}
 .c-page-head__image img {
   height: 100%;
   width: 100%;
@@ -653,6 +656,7 @@ p {
 }
 .c-partner-logos img {
   max-width: 8rem;
+  height: auto;
 }
 
 .c-partner-logos__list-item {
@@ -704,6 +708,7 @@ p {
     gap: 0.5em;
     flex-direction: row;
     justify-content: space-between;
+    overflow-y: visible;
   }
 }
 

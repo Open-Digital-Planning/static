@@ -6,7 +6,7 @@ head_content: |
   ideas for service improvements, then help to design and test them. You
   are part of a large consortium, joining workshops with councils all over
   the country.
-head_image_url: /images/workshop.png
+head_image_url: /images/workshop.jpg
 head_image_alt: A workshop!
 intro_title: Who's involved?
 partners:
@@ -53,10 +53,8 @@ block intro %}
 <ul class="c-partner-logos" role="list">
   {% for partner in partners %}
   <li class="c-partner-logos__list-item">
-    <img
-      src="/images/partner-logos/{{ partner.logo }}"
-      alt="{{ partner.name }}"
-    />
+    {% image "/images/partner-logos/" + partner.logo, partner.name, false,
+    '100vw' %}
   </li>
   {% endfor %}
 </ul>

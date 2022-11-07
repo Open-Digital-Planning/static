@@ -1,12 +1,8 @@
 <div class="c-page-head">
   <div class="c-page-head__image">
     <div class="c-page-head-image-wrapper">
-      <img
-        src="{{ head_image_url }}"
-        height="349"
-        width="616"
-        alt="{{ head_image_alt }}"
-      />
+      {% image head_image_url, head_image_alt, true, '(max-width: 800px) 100vw,
+      50vw' %}
     </div>
   </div>
   <div class="c-page-head__content o-flow o-box">
