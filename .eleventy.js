@@ -55,6 +55,11 @@ module.exports = function (eleventyConfig) {
         ...imageAttributes,
         ...{ loading: 'lazy', decoding: 'async' },
       }
+    } else {
+      imageAttributes = {
+        ...imageAttributes,
+        ...{ fetchpriority: 'high' },
+      }
     }
     // get metadata
     metadata = Image.statsSync(src, options)
