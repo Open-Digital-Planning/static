@@ -1,5 +1,6 @@
 ul:not([class]),ol:not([class]) {
-  list-style: none
+  list-style: none;
+  max-width: 45ch;
 }
 
 ol:not([class]) li,ul:not([class]) li {
@@ -8,7 +9,7 @@ ol:not([class]) li,ul:not([class]) li {
 }
 
 ol:not([class]) li+li,ul:not([class]) li+li {
-  margin-top: 1em
+  margin-top: 0.5em;
 }
 
 ul:not([class]) {
