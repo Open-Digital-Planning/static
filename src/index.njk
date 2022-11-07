@@ -1,11 +1,14 @@
 ---
 title: Home
+desc: Planning services designed by councils for councils.
 layout: layouts/base.njk
-intro: We are a team of local government planners and officers rethinking local planning and co-designing new software. Together we are Open Digital Planning.
+intro: Open Digital Planning is a visionary project to design the next generation of planning services for local government.
 by_councils_heading: Join a collaborative venture
-by_councils_content: We are creating user-centred services that make applying for and assessing planning applications simpler for applicants, agents and council officers.
-for_councils_heading: The services and software
-for_councils_content: Open Digital Planning is a set of integrated software tools for planning teams in UK councils.
+by_councils_content: We are a growing group of UK council officers who have joined together with digital agencies to co-design, build, test and launch better software.
+by_councils_cta_title: Find out more about the project
+by_councils_cta_url: /about
+for_councils_heading: Our services and software
+for_councils_content: Open Digital Planning is a set of integrated applications that are simpler for applicants, agents and planning officers.
 services:
   - name: Guidance
     content: Support citizens in your council who want to find out if they need to apply for planning permission
@@ -19,6 +22,12 @@ services:
     content: Support citizens in your council who want to find out if they need to apply for planning permission
     icon_id: circle
     url: /services/assessment
+claim: We estimate that our software prevents 71% of invalid application
+claim_cta_url: /benefits
+event_name: DLUHC funding launch event
+event_date: 16 November 2022
+event_cta_url: https://www.eventbrite.com/e/digital-planning-software-improvement-fund-launch-event-tickets-461793576017
+event_cta_title: Register now
 ---
 
 <div class="c-home-hero">
@@ -34,7 +43,9 @@ services:
     <h2 class="c-card__eyebrow">By councils</h2>
     <h3>{{ by_councils_heading }}</h3>
     <p>{{ by_councils_content }}</p>
-    <a href="/" class="c-button">Learn more</a>
+    <a href="{{ by_councils_cta_url }}" class="c-button">{{
+      by_councils_cta_title
+    }}</a>
   </div>
 </div>
 <div class="o-region o-container o-flow">
@@ -49,9 +60,11 @@ services:
   <div class="c-overlap__top">
     <div class="c-overlap-container o-container o-region o-flow">
       <h2>
-        We estimate that our software will reduce invalid applications by 71%
+        {{ claim }}
       </h2>
-      <a href="/" class="c-button c-button--action">Find out how</a>
+      <a href="{{ claim_cta_url }}" class="c-button c-button--action"
+        >Find out more</a
+      >
     </div>
   </div>
   <div class="c-overlap__bottom">
@@ -59,9 +72,11 @@ services:
       class="c-overlap-container c-background c-background--calendar o-container o-region o-flow"
     >
       <h2 class="u-step-1">Upcoming event</h2>
-      <h3>Show & Tell: RIPA/BOPS</h3>
-      <p>12 October 2022</p>
-      <a href="/" class="c-button c-button--action">Find out how</a>
+      <h3>{{ event_name }}</h3>
+      <p>{{ event_date }}</p>
+      <a href="{{ event_cta_url }}" class="c-button c-button--action">{{
+        event_cta_title
+      }}</a>
     </div>
   </div>
 </div>
