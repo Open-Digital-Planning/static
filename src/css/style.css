@@ -390,6 +390,11 @@ p {
   align-items: center;
 }
 
+.o-centre {
+  display: flex;
+  justify-content: center;
+}
+
 .c-site-head {
   padding: var(--space-s) 0;
 }

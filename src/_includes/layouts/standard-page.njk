@@ -14,17 +14,23 @@
   </div>
 {% endif %}
 <div class="u-bg-grey-light">
-  <div class="c-page-intro o-switcher o-container o-region">
-    <div class="c-page-intro__top o-flow">
-      <h2 class="c-page-intro__heading">{{ intro_title }}</h2>
-      {% block intro %}{% endblock %}
+  {% if intro_title %}
+    <div class="c-page-intro o-switcher o-container o-region">
+      <div class="c-page-intro__top o-flow">
+        <h2 class="c-page-intro__heading">{{ intro_title }}</h2>
+        {% block intro %}{% endblock %}
+      </div>
+      {% if intro_image_url %}
+      <div class="c-page-intro__bottom">
+        <img src="{{ intro_image_url }}" alt="{{ intro_image_alt }}">
+      </div>
+      {% endif %}
     </div>
-    {% if intro_image_url %}
-    <div class="c-page-intro__bottom">
-      <img src="{{ intro_image_url }}" alt="{{ intro_image_alt }}">
-    </div>
+    {% elif youtube_video_id %}
+      <div class="o-container o-region o-centre">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ youtube_video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     {% endif %}
-  </div>
 </div>
 <div class="c-page-content o-container o-flow o-region u-flow-space-xl">
   {% block body %}{% endblock %}
