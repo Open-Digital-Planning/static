@@ -1,23 +1,45 @@
 ---
 layout: layouts/base.njk
 title: Application service
+desc: A user friendly browser based Application Service allowing residents to apply for a Lawful Development Certificate
 title_icon: diamond
 head_content: |
-  More power to planners, less work.
+  By only asking questions relevant to their project, our Application Service makes it simpler for residents and planning agents to request a Lawful Development Certificate. The service can be integrated with back office systems.
 intro_title: Aim
 intro_content: |
-  <p>Built on the Plan✕ platform, our Guidance service translates national permitted development rules into simple questions relevant to a project. It can be used use by individuals and planning professionals.</p>
+  <p>Our aim is to help residents and planning agents to submit high quality planning applications that are right first time. Our first live service is for Lawful Development Certificate submissions.</p>
 content:
   - type: text
-    heading: Features
+    heading: Description
     content: |
-      <p>Applicants will triage their planning project in minutes to find out whether they need planning permission, using guides written and published by local planning authorities themselves, putting planners in control.</p>
-      <p>Using the Plan✕ editor, officers can write, check, analyse and improve their digital guides as flowcharts, to get the planning outcomes they want.</p>
+      <p>Our application service simplifies the General Permitted Development Order (GPDO) legislation, and only requests information relevant to the project.</p>
+      <p>When answering questions about their project, residents and planning agents are shown rules related to permitted development rights.</p>
+      <p>Notable key features:</p>
+      <ul>
+        <li>Everything the <a href="/service/guidance">Guidance Service</a> does</li>
+        <li>Document upload requests come with clear guidance to reduce invalid applications</li>
+        <li>Accepts payments and allows applicants to save and return to a live application</li>
+        <li>Planning teams can manage their own services, allowing quick updates when legislation changes.</li>
+      </ul>
+
   - type: text
-    heading: Technical details
+    heading: Technical information
     content: |
-      <p>If a project requires planning permission, applicants can access any data they have submitted as part of the Application Service.</p>
-      <p>This service will live on your website: When you join Open Digital Planning, you host our software on your own site.</p>
+      <p>Our Guidance and Application services are built on 
+        PlanX so Officers can use a content management editor 
+        to collaboratively write and maintain services.</p>
+      <p>PlanX services are browser-based and users access 
+        them via your Council Website. <a href="https://www.notion.so/Service-specification-a076f18cba104925b2fdeb143d0dcb91">Read full technical 
+        specifications</a>. </p>
+      <p>Automated planning constraints checks are made by 
+        querying the <a href="https://www.planning.data.gov.uk/">National Planning Data Platform</a>. 
+        The platform pulls through standardised data 
+        from council Geographic Information Systems (GIS), 
+        so that users know they are seeing reliable and 
+        assured data relevant to their property.</p>
+      <p>Using APIs, applications come through to our own 
+        <a href="/services/assessment">Assessment Service</a>, and to other existing 
+        back office planning systems. </p>
 ---
 
 {% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%

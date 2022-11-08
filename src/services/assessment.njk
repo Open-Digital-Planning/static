@@ -1,23 +1,56 @@
 ---
 layout: layouts/base.njk
 title: Assessment service
+desc: With everything in one place, Planning Officers can make better, faster decisions.
 title_icon: circle
 head_content: |
-  More power to planners, less work.
+  This tool allows Planning Officers to see their workflow, 
+  status of applications, plans and constraints. Within the 
+  tool they can process and reassign applications and request 
+  more information from the applicant.
 intro_title: Aim
 intro_content: |
-  <p>Built on the Plan✕ platform, our Guidance service translates national permitted development rules into simple questions relevant to a project. It can be used use by individuals and planning professionals.</p>
+  <p>Our aim is to build a service that is a joy to use. 
+    Planners will spend less time searching for information, 
+    and have more time to use their planning expertise on 
+    higher value work.</p>
 content:
   - type: text
-    heading: Features
+    heading: Description
     content: |
-      <p>Applicants will triage their planning project in minutes to find out whether they need planning permission, using guides written and published by local planning authorities themselves, putting planners in control.</p>
-      <p>Using the Plan✕ editor, officers can write, check, analyse and improve their digital guides as flowcharts, to get the planning outcomes they want.</p>
+      <p>Our Assessment Service is a case management system 
+        that has been designed with extensive inputs from 
+        planning teams, and makes planning data more accessible. 
+        Planners spend less time searching for, and requesting 
+        information.</p>
+      <p>Notable features include:</p>
+      <ul>
+        <li>Clearly shows the officer's workflow and status of applications</li>
+        <li>All documents and data are shown side-by-side, in one place</li>
+        <li>Shows any constraints picked up when the applicant draws a digital red line boundary</li>
+        <li>Allows officers to amend this red line boundary, and to send a request for approval to applicants</li>
+        <li>All officer-to-applicant communications take place in the service, generating a consistent audit trail</li>
+        <li>Notifications are sent directly to applicants to request new or updated documents</li>
+      </ul>
   - type: text
-    heading: Technical details
+    heading: Technical information / links
     content: |
-      <p>If a project requires planning permission, applicants can access any data they have submitted as part of the Application Service.</p>
-      <p>This service will live on your website: When you join Open Digital Planning, you host our software on your own site.</p>
+      <p>The Assessment Service is built on the Back Office Planning System (BOPS), 
+        an open source case management system that allows planning teams to validate 
+        and assess planning applications.</p>
+      <p>BOPS services are browser-based and officers access them via your 
+        council website. The BOPS applicant module is a browser-based 
+        interface that applicants can use when interacting with council 
+        staff about their application.</p>
+      <p>The Assessment Service receives application data from <a href="/services/application">Application 
+        services</a> built using PlanX. </p>
+      <p>Integrations with <a href="https://www.notifications.service.gov.uk/">GOV.UK Notify</a> and 
+        <a href="https://www.payments.service.gov.uk/">GOV.UK Pay</a> allow officers to check and amend fees and application details, sending email 
+        notifications straight from the system, with a clear audit 
+        log of communications.</p>
+      <p>Team members get individual login accounts, and the developer, 
+        Unboxed, can provide training support for digital transformation 
+        at your planning authority.</p>
 ---
 
 {% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%

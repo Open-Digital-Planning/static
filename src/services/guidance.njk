@@ -1,23 +1,44 @@
 ---
 layout: layouts/base.njk
 title: Guidance service
+desc: A browser based service to help residents understand if they need planning permission.
 title_icon: triangle
 head_content: |
-  More power to planners, less work.
+  By only asking questions relevant to their project, our Guidance Service makes it 
+  simpler for residents and planning agents to find out what type of planning permissions 
+  to apply for.
 intro_title: Aim
 intro_content: |
-  <p>Built on the Plan✕ platform, our Guidance service translates national permitted development rules into simple questions relevant to a project. It can be used use by individuals and planning professionals.</p>
+  <p>Our aim is to make it easier for residents and planning 
+    agents to check what planning permissions their proposed 
+    project is likely to need, and to understand any restrictions on a property.</p>
 content:
   - type: text
-    heading: Features
+    heading: Description
     content: |
-      <p>Applicants will triage their planning project in minutes to find out whether they need planning permission, using guides written and published by local planning authorities themselves, putting planners in control.</p>
-      <p>Using the Plan✕ editor, officers can write, check, analyse and improve their digital guides as flowcharts, to get the planning outcomes they want.</p>
+      <p>Our Guidance service makes it simpler for residents and planning agents to 
+        find out what type of planning permissions to apply for, by only asking 
+        questions relevant to their project. </p>
+      <p>Notable features include:</p>
+      <ul>
+        <li>Applicants can draw a digital site boundary, which is submitted 
+          as a data polygon, so PDF location plans are no longer needed.</li>
+        <li>The service automatically checks the constraints affecting a property, such as whether it is in a conservation area.</li>
+        <li>Help text and illustrations explain complex planning issues in plain english, and signpost the source legislation.</li>
+        <li>If the guidance service recommends applying for a Lawful Development Certificate, it will provide a link to this Application Service.</li>
+      </ul>
   - type: text
-    heading: Technical details
+    heading: Technical information
     content: |
-      <p>If a project requires planning permission, applicants can access any data they have submitted as part of the Application Service.</p>
-      <p>This service will live on your website: When you join Open Digital Planning, you host our software on your own site.</p>
+      <p>Our Guidance and <a href="/services/application">Application services</a> are built on PlanX 
+        (developed through the RIPA project), which means that Officers 
+        can use a low-code editor to collaboratively write and maintain services.</p>
+      <p>PlanX services are browser-based and users access them via your Council Website. 
+        <a href="https://www.notion.so/Service-specification-a076f18cba104925b2fdeb143d0dcb91">Read full technical specifications</a>.</p>
+      <p>Automated planning constraints checks are made by querying the <a href="https://www.planning.data.gov.uk/">National 
+        Planning Data Platform</a>. The platform pulls through standardised data from 
+        council Geographic Information Systems (GIS), so that users know they are 
+        seeing reliable and assured data relevant to their property.</p>
 ---
 
 {% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
