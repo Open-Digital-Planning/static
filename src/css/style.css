@@ -840,6 +840,7 @@ p {
     overflow: hidden;
   }
   .c-overlap__bottom .c-overlap-container {
+    padding-left: var(--space-l);
     position: relative;
     transform: translateX(5rem);
   }
