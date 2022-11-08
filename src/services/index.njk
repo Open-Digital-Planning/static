@@ -45,7 +45,11 @@ content:
 block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
 intro %}
 {{ intro_content | safe }}
-{% endblock %} {% block body %} {% include "service-tiles.njk" %} {% for item in
-content %}
-{{ blocks.print(item) }}
-{% endfor %} {% endblock %}
+{% endblock %} 
+{% block body %} 
+  {% set service_tiles_standalone = true %}
+  {% include "service-tiles.njk" %} 
+  {% for item in content %}
+    {{ blocks.print(item) }}
+  {% endfor %} 
+{% endblock %}

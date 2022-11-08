@@ -522,6 +522,7 @@ p {
 
 .c-service-tile__link {
   color: var(--colour-pink);
+  margin-top: auto;
 }
 
 .c-register-block {

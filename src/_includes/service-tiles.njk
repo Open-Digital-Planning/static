@@ -4,7 +4,11 @@
     <svg focusable="false" class="c-service-tile__icon">
       <use xlink:href="/images/all.svg#{{ service.icon_id }}"></use>
     </svg>
-    <h4>{{ service.name }}</h4>
+    {% if service_tiles_standalone %}
+      <h2 class="u-step-1">{{ service.name }}</h2>
+    {% else %}
+      <h4>{{ service.name }}</h4>
+    {% endif %}
     <p>{{ service.content }}</p>
     <a href="{{ service.url }}" class="c-service-tile__link c-with-icon">
       Learn more
