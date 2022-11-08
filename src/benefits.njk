@@ -1,44 +1,88 @@
 ---
 layout: layouts/base.njk
 title: Benefits
+desc: Long-term time and cost savings, and a better experience for residents
 head_content: |
-  Building the case for your local authority to join Open Digital Planning.
+  Long-term time and cost savings, and a better experience for residents
 head_image_url: /images/tablet-bops.png
 head_image_alt: A tablet displaying an application form.
 intro_title: Metrics
 intro_content: |
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-  enim ad minim veniam, quis nostrud exercitation 
-  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit 
-  esse cillum dolore eu fugiat nulla pariatur</p>
+  <p>We are making it easier for residents to apply for planning permissions,
+      and giving planning teams time to focus on high value work.</p>
 content:
   - type: text
-    heading: Reduced costs / admin
-    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  - type: cta_and_quote
-    cta_heading:  We have calculated the benefits case data
-    cta_link_text: Download spreadsheet
-    cta_link_url: /
-    quote: It's great
-    attributee: Bob, Planning Manager at Lambeth Council
+    heading: Why metrics are important
+    content: |
+      <p>Our product development is led by evidence. All project 
+        partners contribute to an active metrics working group. We keep a close 
+        eye on the performance of the services to understand where improvements 
+        can be made, and to support the business case for adoption.</p>
+      <p>All partners have benchmarked their data and we are currently 
+        collecting information about the live services to test our 
+        assumptions. We aim to publish updates on what we're learning as we go, 
+        and we will share our detailed projected benefits soon.</p>
   - type: text
-    heading: Better user experience / Improved service delivery
-    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    heading: Better user experience / service delivery
+    content: |
+      <p>On average, around 50% of planning applications are 
+        invalid when they are received by a council. The Guidance 
+        and Application services aim to make it more likely that 
+        a planning application will be valid on receipt. </p>
+      <p>They help applicants and agents understand planning rules 
+        better through plain English questions, help text and diagrams 
+        that relate to legislation.</p>
+      <p>Common errors related to the site location plan, the application 
+        form and planning fees are much less frequent due to the way the 
+        services are designed. We estimate that our services prevent 71% 
+        of invalid planning applications and we are measuring the performance 
+        of live services right now.</p>
   - type: text
-    heading: Higher team satisfaction
-    content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    heading: Reduced administration
+    content: |
+      <p>With better online guidance, and better quality applications received, 
+        Officers spend less time working through minor issues.</p>
+      <p>Planning Officers are assigned work and carry out the majority of application 
+        processing tasks within the Assessment service, reducing the number of 
+        workarounds and other software tools that need to be used. When an 
+        applicant does need to be contacted for clarification or further 
+        information, this is all done inside the Assessment service. </p>
+      <p>We project that the time taken to validate an application will be reduced 
+        by around 20% when our Application and Assessment services are used together. </p>
+  - type: text
+    heading: Planning team satisfaction
+    content: |
+      <p>Planning isn't supposed to be dominated by administration. Our services 
+        are rebalancing the work of local planning teams. We've started by focusing 
+        on applications for individual householder planning permissions, the 
+        straightforward types of planning applications that account for 85% of 
+        applications received by the average council. </p>
+      <p>These 'simple' applications currently take up a disproportionate amount 
+        of time, which could be spent elsewhere on higher value more complex 
+        #schemes that make better use of planning expertise, draw planners 
+        to the profession in the first place, and are helping to address the 
+        national housing crisis.</p>
+  - type: text
+    heading: Reduced costs
+    content: |
+      <p>The cost of development management software varies greatly between 
+        different councils, and different service providers. In addition to 
+        annual licenses, many councils are finding that the amount they spend 
+        on add-ons and upgrades each year can exceed the annual licensing costs.</p>
+      <p>Open Digital Planning services are modern, cloud-first software 
+        services where everyone benefits from version upgrades and new 
+        features, which are rolled out to all councils at the same time. </p>
+      <p>The services are not currently commercially available, and we are 
+        still working on a transparent and appropriate pricing model. 
+        We're seeking the inputs of our partners and potential users 
+        to inform this. If you'd like to join the Open Digital Planning project, 
+        to start using our services and to have your say, find out <a href="/join">How to Join</a>.</p>
 ---
 
-{% import "blocks.njk" as blocks %} 
-{% extends "layouts/standard-page.njk" %} 
-{% block head %} {% include "page-head-with-image.njk" %} {% endblock %} 
-{% block intro %}
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
+intro %}
 {{ intro_content | safe }}
-{% endblock %} 
-{% block body %} 
-  {% for item in content %}
-    {{ blocks.print(item) }}
-  {% endfor %} 
-{% endblock %}
+{% endblock %} {% block body %} {% for item in content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}
