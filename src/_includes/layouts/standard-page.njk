@@ -1,36 +1,38 @@
-{% if head_image_url %}
-  {% include "page-head-with-image.njk" %}
-{% else %}
-  <div class="o-container o-region o-flow">
-    <h1 class="{%if title_icon %}c-with-icon{% endif %}">
-      {% if title_icon %}
-        <svg class="c-icon">
-            <use xlink:href="/images/all.svg#{{ title_icon }}" />
-          </svg>
-      {% endif %}
-      {{ title }}
-    </h1>
-    <p>{{ head_content }}</p>
-  </div>
+{% if head_image_url %} {% include "page-head-with-image.njk" %} {% else %}
+<div class="o-container o-region o-flow">
+  <h1 class="{%if title_icon %}c-with-icon{% endif %}">
+    {% if title_icon %}
+    <svg class="c-icon">
+      <use xlink:href="/images/all.svg#{{ title_icon }}" />
+    </svg>
+    {% endif %}
+    {{ title }}
+  </h1>
+  <p>{{ head_content }}</p>
+</div>
 {% endif %}
 <div class="u-bg-grey-light">
   {% if intro_title %}
-    <div class="c-page-intro o-switcher o-container o-region">
-      <div class="c-page-intro__top o-flow">
-        <h2 class="c-page-intro__heading">{{ intro_title }}</h2>
-        {% block intro %}{% endblock %}
-      </div>
-      {% if intro_image_url %}
-      <div class="c-page-intro__bottom">
-        <img src="{{ intro_image_url }}" alt="{{ intro_image_alt }}">
-      </div>
-      {% endif %}
+  <div class="c-page-intro o-switcher o-container o-region">
+    <div class="c-page-intro__top o-flow">
+      <h2 class="c-page-intro__heading">{{ intro_title }}</h2>
+      {% block intro %}{% endblock %}
     </div>
-    {% elif youtube_video_id %}
-      <div class="o-container o-region o-centre">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ youtube_video_id }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+    {% if intro_image_url %}
+    <div class="c-page-intro__bottom">
+      <img src="{{ intro_image_url }}" alt="{{ intro_image_alt }}" />
+    </div>
     {% endif %}
+  </div>
+  {% elif youtube_video_id %}
+  <div class="o-container o-region">
+    <lite-youtube
+      class="o-centre"
+      videoid="{{ youtube_video_id }}"
+      playlabel="{{ youtube_video_label }}"
+    ></lite-youtube>
+  </div>
+  {% endif %}
 </div>
 <div class="c-page-content o-container o-flow o-region u-flow-space-xl">
   {% block body %}{% endblock %}

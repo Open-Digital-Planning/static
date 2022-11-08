@@ -391,8 +391,7 @@ p {
 }
 
 .o-centre {
-  display: flex;
-  justify-content: center;
+  margin-inline: auto;
 }
 
 .c-site-head {

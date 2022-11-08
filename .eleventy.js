@@ -13,7 +13,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css')
   eleventyConfig.addPassthroughCopy('./src/images')
   eleventyConfig.addPassthroughCopy('./src/js')
-
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/lite-youtube-embed/src': 'lite-youtube-embed',
+  })
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
     ui: false,

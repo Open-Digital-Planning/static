@@ -5,40 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }} | {{ site.name }}</title>
-    <meta name="description" content="{{ desc or title }}">
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <meta name="description" content="{{ desc or title }}" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/lite-youtube-embed/lite-yt-embed.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Roboto:wght@300;700&display=swap"
       rel="stylesheet"
     />
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ desc or title }}">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="{{ '/images/example.jpg' }}"/>
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ desc or title }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="{{ '/images/example.jpg' }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <!-- Twitter -->
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@bops_digital">
-    <meta name="twitter:description" content="{{ desc or title }}">
-    <meta name="twitter:image" content="{{ cover }}">
-    <meta name="twitter:creator" content="@bops_digital">
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bops_digital" />
+    <meta name="twitter:description" content="{{ desc or title }}" />
+    <meta name="twitter:image" content="{{ cover }}" />
+    <meta name="twitter:creator" content="@bops_digital" />
     {% if env.GTMID %}
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id={{ env.GTMID }}"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || []
-        function gtag() {
-          dataLayer.push(arguments)
-        }
-        gtag('js', new Date())
-        gtag('config', "{{ env.GTMID }}")
-      </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ env.GTMID }}"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', '{{ env.GTMID }}')
+    </script>
     {% endif %}
   </head>
   <body class="preload">
@@ -52,5 +53,6 @@
       document.querySelector('body').classList.remove('preload')
     </script>
     <script src="/js/menu-toggle.js"></script>
+    <script src="/lite-youtube-embed/lite-yt-embed.js"></script>
   </body>
 </html>
