@@ -61,6 +61,10 @@
   --step-5: clamp(2.80rem, calc(2.56rem + 1.21vw), 3.42rem);
 }
 
+:root {
+  --region-space: var(--space-xl);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -418,6 +422,10 @@ p {
   flex: 9999;
 }
 
+.c-site-main {
+  padding-bottom: var(--space-2xl);
+}
+
 .c-site-footer {
   display: flex;
   flex-wrap: wrap;
@@ -520,9 +528,12 @@ p {
   width: 2.5rem;
 }
 
+.c-service-tile__text {
+  flex-grow: 1;
+}
+
 .c-service-tile__link {
   color: var(--colour-pink);
-  margin-top: auto;
 }
 
 .c-register-block {
@@ -533,6 +544,9 @@ p {
 .c-register-block__ctas {
   --switcher-threshold: 30rem;
   --switcher-gutter: 1rem;
+}
+.c-register-block__ctas > * {
+  max-width: 20ch;
 }
 
 .c-icon {

@@ -79,10 +79,11 @@
   <body class="preload">
     <a href="#main" class="u-visually-hidden">Skip to content</a>
     {% include "header.njk" %}
-    <main id="main" tabindex="-1">
+    <main id="main" class="c-site-main" tabindex="-1">
       {{ content | safe }}
+      {% include "register-block.njk" %}
     </main>
-    {% include "register-block.njk" %} {% include "footer.njk" %}
+    {% include "footer.njk" %}
     <script>
       document.querySelector('body').classList.remove('preload')
     </script>

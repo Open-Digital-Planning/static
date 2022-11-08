@@ -18,8 +18,9 @@
   height: 2.5rem;
   width: 2.5rem;
 }
-
+.c-service-tile__text {
+  flex-grow: 1;
+}
 .c-service-tile__link {
   color: var(--colour-pink);
-  margin-top: auto;
 }

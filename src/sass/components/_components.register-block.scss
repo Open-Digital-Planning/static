@@ -6,4 +6,7 @@
 .c-register-block__ctas {
   --switcher-threshold: 30rem;
   --switcher-gutter: 1rem;
+  & > * {
+    max-width: 20ch;
+  }
 }
