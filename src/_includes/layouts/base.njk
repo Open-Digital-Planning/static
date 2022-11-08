@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% if page.fileSlug == '' %}
-    {% set page_id = 'home' %} 
-  {% else %}
-    {% set page_id = page.fileSlug %} 
-  {% endif %}
-  {% set social_image = [env.URL, "/images/social/", page_id, ".png"] | join %}
+  {% if page.fileSlug == '' %} {% set page_id = 'home' %} {% else %} {% set
+  page_id = page.fileSlug %} {% endif %} {% set social_image = [env.URL,
+  "/images/social/", page_id, ".png"] | join %}
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,7 +24,7 @@
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ desc or title }}" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="{{ social_image }}"/>
+    <meta property="og:image" content="{{ social_image }}" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="675" />
     <!-- Twitter -->
@@ -35,8 +32,35 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bops_digital" />
     <meta name="twitter:description" content="{{ desc or title }}" />
-    <meta name="twitter:image" content="{{ social_image }}"/>
+    <meta name="twitter:image" content="{{ social_image }}" />
     <meta name="twitter:creator" content="@bops_digital" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#bb1450"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#CB3C79" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="theme-color" content="#CB3C79" />
     {% if env.GTMID %}
     <script
       async
