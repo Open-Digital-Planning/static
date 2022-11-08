@@ -446,7 +446,7 @@ p {
 }
 @media (min-width: 62em) {
   .c-home-hero {
-    padding-bottom: var(--space-l);
+    padding-bottom: var(--space-xl);
     background-size: contain;
   }
 }

@@ -8,7 +8,7 @@
   padding-bottom: min(80%, 30rem);
   padding-top: var(--space-l);
   @include media-query(lg) {
-    padding-bottom: var(--space-l);
+    padding-bottom: var(--space-xl);
     background-size: contain;
   }
 }
