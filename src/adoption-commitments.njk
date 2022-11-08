@@ -1,0 +1,118 @@
+---
+layout: layouts/base.njk
+title: Adoption commitments
+desc: Open Digital Planning partners will need to fulfil these commitments in order to adopt the services and join the project team.
+head_content: |
+  The commitments you need to meet to become a member of Open Digital Planning
+intro_content: |
+  <p>Councils adopting Open Digital Planning services and joining 
+    the project team should work towards our adoption commitments.</p>
+content:
+  - type: text
+    heading: 1. Explain the Open Digital Planning project to your colleagues
+    content: |
+      <p>Point your colleagues, planning service teams and key decision 
+        makers towards the Open Digital Planning website, sign up to our 
+        mailing list, and attend our regular Show & Tells to familiarise 
+        yourself with the project and the journey that partner councils 
+        are going on.</p>
+  - type: text
+    heading: 2. Sign the Local Digital Declaration
+    content: |
+      <p>Partner councils agree to modern ways of designing and developing 
+        digital services, in line with the principles of the <a href="https://www.localdigital.gov.uk/declaration/">Local Digital Declaration</a>
+         and the <a href="https://www.gov.uk/guidance/the-technology-code-of-practice">Government Technology Code of Practice</a>. 
+         <a href="https://www.localdigital.gov.uk/what-is-the-declaration/">Sign up today</a>.</p>
+  - type: text
+    heading: 3. Make sure IT are involved from the start
+    content: |
+      <p>The responsible people in the project team clearly understand the 
+        requirements and processes for launching and running Open Digital Planning services. 
+        Integrations with existing business software products are defined in collaboration 
+        with relevant systems specialists. Key people in IT, digital, customer experience 
+        and web teams are consulted.</p>
+  - type: text
+    heading: 4. Make sure senior staff are involved from the start
+    content: |
+      <p>Endorsements to implement Open Digital Planning services are given 
+        by senior stakeholders including Directors involved in planning, 
+        IT, transformation and finance.</p>
+  - type: text
+    heading: 5. Publish your Geographic Information Systems (GIS) layers
+    content: |
+      <p>Certain geospatial datasets are available in a machine readable 
+        format that can be consumed by Open Digital Planning services. 
+        More will be added to this list over time; the first four are:</p>
+      <ul>
+        <li>Article 4 directions</li>
+        <li>Conservation areas</li>
+        <li>Listed buildings</li>
+        <li>Tree preservation orders</li>
+      </ul>
+  - type: text
+    heading: 6. Assemble the right team
+    content: |
+      <p>People you nominate from your existing team, or recruit specifically 
+        to join the project team, have the right mix of skills and experience 
+        and can commit the required time for project activities, depending on 
+        the level of involvement you choose. Your team has strong links with 
+        the planning service in your council, and will slot into the Open 
+        Digital Planning team's established working practices, which 
+        are based on <a href="https://www.gov.uk/service-manual/agile-delivery">agile software development principles</a>.</p>
+  - type: text
+    heading: 7. Secure data approvals
+    content: |
+      <p>Data protection impact assessments, data protection agreements and 
+        privacy notices are approved following conversations with Data 
+        Protection Officers and information governance teams.</p>
+  - type: text
+    heading: 8. Send Notifications using GOV.UK Notify
+    content: |
+      <p>All notifications to applicants from the Open Digital Planning 
+        services are sent using the open source GOV.UK Notify platform.</p>
+  - type: text
+    heading: 9. Adopt GOV.UK pay
+    content: |
+      <p>All payments received through Open Digital Planning services are processed 
+        using the open source GOV.UK Pay payments platform via Stripe. Local 
+        authority finance teams support this.</p>
+  - type: text
+    heading: 10. Collect and share your metrics
+    content: |
+      <p>All partners take part in our metrics working group to measure the 
+        performance of new and existing software through regular reporting, 
+        time recording and comparison against historic data. This supports 
+        the case for further funding and adoption. </p>
+  - type: text
+    heading: 10. Collect and share your metrics
+    content: |
+      <p>All partners take part in our metrics working group to measure the 
+        performance of new and existing software through regular reporting, 
+        time recording and comparison against historic data. This supports 
+        the case for further funding and adoption. </p>
+  - type: text
+    heading: 11. Learn and build capability
+    content: |
+      <p>Project team members are encouraged to pursue training opportunities 
+      to hone new digital skills, and in turn will brief and train planning 
+      service staff on the new products and engage them in research and 
+      testing activities.</p>
+  - type: text
+    heading: 12. Promote the use of Open Digital Planning services
+    content: |
+      <p>Councils use their websites and digital communications channels 
+      to encourage applicants to use the Open Digital Planning <a href="/services/guidance">Guidance</a> 
+      and <a href="/services/application">Application</a> services. 
+      Project team members lead peer-to-peer conversations with colleagues and counterparts in other councils 
+      to inform and educate them about the products. Opportunities 
+      to take part in occasional presentations and conferences are 
+      shared among team members.</p>
+---
+
+{% import "blocks.njk" as blocks %} {% extends "layouts/standard-page.njk" %} {%
+block head %} {% include "page-head-with-image.njk" %} {% endblock %} {% block
+intro %}
+{{ intro_content | safe }}
+{% endblock %} {% block body %} {% for item in content %}
+{{ blocks.print(item) }}
+{% endfor %} {% endblock %}
