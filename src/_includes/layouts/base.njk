@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% if page.fileSlug == '' %} {% set page_id = 'home' %} {% else %} {% set
-  page_id = page.fileSlug %} {% endif %} {% set social_image = [env.URL,
-  "/images/social/", page_id, ".png"] | join %}
+  {% if page.fileSlug == '' %} 
+    {% set page_id = 'home' %} 
+  {% else %} 
+    {% set page_id = page.fileSlug %} 
+  {% endif %} 
+  {% set social_image = [env.URL, "/images/social/", page_id, ".png"] | join %}
+  {% set google_fonts_url = "https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Roboto:wght@300;700&display=swap" %}
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,10 +21,18 @@
     <link rel="stylesheet" href="/lite-youtube-embed/lite-yt-embed.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="{{ google_fonts_url }}">
     <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600&family=Roboto:wght@300;700&display=swap"
+      href="{{ google_fonts_url }}"
       rel="stylesheet"
+      media="print" onload="this.onload=null;this.removeAttribute('media');" 
     />
+    <noscript>
+      <link
+        href="{{ google_fonts_url }}"
+        rel="stylesheet"
+      />
+    </noscript>
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ desc or title }}" />
     <meta property="og:type" content="article" />
