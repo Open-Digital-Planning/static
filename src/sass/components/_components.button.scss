@@ -25,6 +25,7 @@
   font-weight: 600;
   --link: var(--colour-black);
   --link-visited: var(--colour-black);
+  --link-active: var(--colour-black);
   --link-hover: var(--colour-black);
   &:hover {
     background-color: color.scale(map.get($colours, "yellow"), $lightness: -30%);
