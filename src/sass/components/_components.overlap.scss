@@ -1,4 +1,5 @@
 @use '../tools/tools.media-query' as *;
+
 .c-overlap {
   color: var(--colour-white);
 }
@@ -26,7 +27,8 @@
         display: block;
         background-color: white;
       }
-    }}
+    }
+  }
     
     .c-overlap__bottom {
       overflow: hidden;

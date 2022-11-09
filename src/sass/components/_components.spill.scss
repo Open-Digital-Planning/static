@@ -1,0 +1,19 @@
+.c-spill {
+  overflow: hidden;
+  .c-spill-container {
+    padding-left: var(--space-l);
+    position: relative;
+    transform: translateX(5rem);
+    &:after {
+      content: '';
+      height: 100%;
+      left: 0;
+      bottom: 0;
+      width: 999px;
+      transform: translateX(-999px);
+      position: absolute;
+      display: block;
+      background-color: white;
+    }
+  }
+}

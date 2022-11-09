@@ -641,12 +641,6 @@ p {
   width: 100%;
 }
 
-@media (min-width: 48em) {
-  .c-page-content .c-quote {
-    transform: translateX(5rem);
-  }
-}
-
 .c-page-intro {
   --switcher-threshold: 50rem;
 }
@@ -866,6 +860,26 @@ p {
     background-color: white;
   }
 }
+.c-spill {
+  overflow: hidden;
+}
+.c-spill .c-spill-container {
+  padding-left: var(--space-l);
+  position: relative;
+  transform: translateX(5rem);
+}
+.c-spill .c-spill-container:after {
+  content: "";
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  width: 999px;
+  transform: translateX(-999px);
+  position: absolute;
+  display: block;
+  background-color: white;
+}
+
 .u-bg-black {
   background-color: var(--colour-black);
 }

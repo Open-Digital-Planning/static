@@ -1,9 +1,0 @@
-@use '../tools/tools.media-query' as *;
-
-.c-page-content {
-  @include media-query(md) {
-    .c-quote {
-      transform: translateX(5rem);
-    }
-  } 
-}
