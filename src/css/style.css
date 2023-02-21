@@ -867,10 +867,13 @@ p {
 .c-spill .c-spill-container {
   padding-left: var(--space-l);
   position: relative;
-  transform: translateX(5rem);
+}
+@media (min-width: 62em) {
+  .c-spill .c-spill-container {
+    transform: translateX(5rem);
+  }
 }
 .c-spill .c-spill-container:after {
-  content: "";
   height: 100%;
   left: 0;
   bottom: 0;
@@ -879,6 +882,11 @@ p {
   position: absolute;
   display: block;
   background-color: white;
+}
+@media (min-width: 62em) {
+  .c-spill .c-spill-container:after {
+    content: "";
+  }
 }
 
 .u-bg-black {

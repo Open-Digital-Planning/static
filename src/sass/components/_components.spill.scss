@@ -1,11 +1,17 @@
+@use '../tools/tools.media-query' as *;
+
 .c-spill {
   overflow: hidden;
   .c-spill-container {
     padding-left: var(--space-l);
     position: relative;
-    transform: translateX(5rem);
+    @include media-query(lg) {
+      transform: translateX(5rem);
+    }
     &:after {
-      content: '';
+      @include media-query(lg) {
+        content: '';
+      }
       height: 100%;
       left: 0;
       bottom: 0;

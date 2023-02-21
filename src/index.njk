@@ -56,9 +56,10 @@ event_cta_title: Register now
   </div>
   {% include "service-tiles.njk" %}
 </div>
-<div class="c-overlap">
-  <div class="c-overlap__top">
-    <div class="c-overlap-container o-container o-region o-flow">
+
+<div class="c-spill c-spill--left u-bg-navy u-text-white">
+  <div class="c-spill-container o-container o-region o-flow">
+    <div class="o-flow u-flow-space-s">
       <h2>
         {{ claim }}
       </h2>
@@ -67,19 +68,8 @@ event_cta_title: Register now
       >
     </div>
   </div>
-  <div class="c-overlap__bottom">
-    <div
-      class="c-overlap-container c-background c-background--calendar o-container o-region o-flow"
-    >
-      <h2 class="u-step-1">Upcoming event</h2>
-      <h3>{{ event_name }}</h3>
-      <p>{{ event_date }}</p>
-      <a href="{{ event_cta_url }}" class="c-button c-button--action">{{
-        event_cta_title
-      }}</a>
-    </div>
-  </div>
 </div>
+
 <div class="o-container o-region o-flow">
   <h2>From our Twitter</h2>
   <p>
